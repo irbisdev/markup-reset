@@ -1,0 +1,114 @@
+@import "_mixins.less";
+@import "_reset.less";
+@import "_fonts.less";
+@import "_colors.less";
+
+// --------
+
+// @import "plugins/plugin-name.less";
+
+// --------
+
+	@screen-xs-max: 767px;
+
+	@screen-sm-min: 768px;
+	@screen-sm-max: 959px;
+
+	@screen-md-min: 960px;
+	@screen-md-max: 1279px;
+
+	@screen-lg-min: 1280px;
+
+	@media-xs-only: ~"(max-width: @{screen-xs-max})";
+
+	@media-sm: ~"(min-width: @{screen-sm-min})";
+	@media-sm-only: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+
+	@media-xs-sm: ~"(max-width: @{screen-sm-max})";
+
+	@media-md: ~"(min-width: @{screen-md-min})";
+	@media-md-only: ~"(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+
+	@media-xs-md: ~"(max-width: @{screen-md-max})";
+	@media-sm-md: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-md-max})";
+
+	@media-lg: ~"(min-width: @{screen-lg-min})";
+
+// --------
+
+html { min-width: auto;
+	.size (auto, 100%);
+}
+
+body {
+	font: normal normal 14px/20px 'Roboto', arial, sans-serif;
+	background: @white;
+	color: @black;
+
+	-webkit-text-size-adjust: 100%;
+
+	.font-smoothing (antialiased);
+	.box-sizing (border-box);
+	.min-size (320px);
+	.position (relative);
+
+	input, textarea, button { font-family: 'Roboto', arial, sans-serif; }
+	*, *:before, *:after { .box-sizing (border-box); }
+}
+
+.left { float: left; }
+.right { float: right; }
+.clearfix { *zoom: 1;
+	&:after { clear: both; }
+	&:before, &:after { content: " ";
+		.display (table);
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 40px;
+
+	.size (100%);
+	.min-size (320px);
+	.position (relative);
+
+	@media @media-xs-only { padding: 0 15px; }
+	@media @media-sm-only { padding: 0 20px; }
+}
+
+// --------
+
+@import "components/header.less";
+@import "components/footer.less";
+
+// --------
+
+@import "pages/index.less";
+
+// --------
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg	 { .display (none); }
+
+@media @media-xs-only {
+	.visible-xs { .display (block); }
+	.hidden-xs { .display (none)!important; }
+}
+
+@media @media-sm-only {
+	.visible-sm { .display (block); }
+	.hidden-sm { .display (none)!important; }
+}
+
+@media @media-md-only {
+	.visible-md { .display (block); }
+	.hidden-md { .display (none)!important; }
+}
+
+@media @media-lg {
+	.visible-lg { .display (block); }
+	.hidden-lg { .display (none)!important; }
+}
