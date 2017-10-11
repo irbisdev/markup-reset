@@ -46,14 +46,14 @@ body {
 	color: @black;
 
 	-webkit-text-size-adjust: 100%;
+	font-smoothing: antialiased;
+	box-sizing: border-box;
 
-	.font-smoothing (antialiased);
-	.box-sizing (border-box);
 	.min-size (320px);
 	.position (relative);
 
 	input, textarea, button { font-family: 'Roboto', arial, sans-serif; }
-	*, *:before, *:after { .box-sizing (border-box); }
+	*, *:before, *:after { box-sizing: border-box; }
 }
 
 .left { float: left; }
@@ -91,7 +91,7 @@ body {
 .visible-xs,
 .visible-sm,
 .visible-md,
-.visible-lg	 { .display (none); }
+.visible-lg { .display (none); }
 
 @media @media-xs-only {
 	.visible-xs { .display (block); }
