@@ -46,7 +46,7 @@ body {
 	color: @black;
 
 	-webkit-text-size-adjust: 100%;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
 
 	.min-size (320px);
@@ -91,24 +91,36 @@ body {
 .visible-xs,
 .visible-sm,
 .visible-md,
-.visible-lg { .display (none); }
+.visible-lg,
+.visible-xs-ib,
+.visible-sm-ib,
+.visible-md-ib,
+.visible-lg-ib { .display (none); }
 
 @media @media-xs-only {
 	.visible-xs { .display (block); }
+	.visible-xs-ib { .display (inline-block); }
+
 	.hidden-xs { .display (none)!important; }
 }
 
 @media @media-sm-only {
 	.visible-sm { .display (block); }
+	.visible-sm-ib { .display (inline-block); }
+
 	.hidden-sm { .display (none)!important; }
 }
 
 @media @media-md-only {
 	.visible-md { .display (block); }
+	.visible-md-ib { .display (inline-block); }
+
 	.hidden-md { .display (none)!important; }
 }
 
 @media @media-lg {
 	.visible-lg { .display (block); }
+	.visible-lg-ib { .display (inline-block); }
+
 	.hidden-lg { .display (none)!important; }
 }

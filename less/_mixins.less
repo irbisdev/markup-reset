@@ -83,13 +83,12 @@
 	.col-@{t}-@{i} {
 		float: left;
 		padding: 0 10px;
- 
-		.font (14px, 1.5);
+
 		.size ((@i * 100% / @n));
 	}
- 
+
 	.col-@{t}-offset-@{i} { margin-right: (@i * 100% / @n); }
 	.col-@{t}-offset-l-@{i} { margin-left: (@i * 100% / @n); }
- 
+
 	.cols (@t, @n, (@i + 1));
 }
