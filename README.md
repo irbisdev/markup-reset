@@ -4,8 +4,6 @@
 ---
 
 ## Snipets
-
-#### slick-hack mixin
 ```
 .slick-hack () {
 	.slide { .display (none);
