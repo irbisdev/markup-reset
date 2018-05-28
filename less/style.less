@@ -19,20 +19,20 @@
 
 	@screen-lg-min: 1280px;
 
-	@media-xs-only: ~"(max-width: @{screen-xs-max})";
+	@xs-only: ~"(max-width: @{screen-xs-max})";
 
-	@media-sm: ~"(min-width: @{screen-sm-min})";
-	@media-sm-only: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+	@sm: ~"(min-width: @{screen-sm-min})";
+	@sm-only: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
 
-	@media-xs-sm: ~"(max-width: @{screen-sm-max})";
+	@xs-sm: ~"(max-width: @{screen-sm-max})";
 
-	@media-md: ~"(min-width: @{screen-md-min})";
-	@media-md-only: ~"(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+	@md: ~"(min-width: @{screen-md-min})";
+	@md-only: ~"(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
 
-	@media-xs-md: ~"(max-width: @{screen-md-max})";
-	@media-sm-md: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-md-max})";
+	@xs-md: ~"(max-width: @{screen-md-max})";
+	@sm-md: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-md-max})";
 
-	@media-lg: ~"(min-width: @{screen-lg-min})";
+	@lg: ~"(min-width: @{screen-lg-min})";
 
 // --------
 
@@ -73,8 +73,8 @@ body {
 	.min-size (320px);
 	.position (relative);
 
-	@media @media-xs-only { padding: 0 15px; }
-	@media @media-sm-only { padding: 0 20px; }
+	@media @xs-only { padding: 0 15px; }
+	@media @sm-only { padding: 0 20px; }
 }
 
 // --------
@@ -97,28 +97,28 @@ body {
 .visible-md-ib,
 .visible-lg-ib { .display (none); }
 
-@media @media-xs-only {
+@media @xs-only {
 	.visible-xs { .display (block); }
 	.visible-xs-ib { .display (inline-block); }
 
 	.hidden-xs { .display (none)!important; }
 }
 
-@media @media-sm-only {
+@media @sm-only {
 	.visible-sm { .display (block); }
 	.visible-sm-ib { .display (inline-block); }
 
 	.hidden-sm { .display (none)!important; }
 }
 
-@media @media-md-only {
+@media @md-only {
 	.visible-md { .display (block); }
 	.visible-md-ib { .display (inline-block); }
 
 	.hidden-md { .display (none)!important; }
 }
 
-@media @media-lg {
+@media @lg {
 	.visible-lg { .display (block); }
 	.visible-lg-ib { .display (inline-block); }
 
