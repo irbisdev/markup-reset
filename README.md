@@ -3,7 +3,7 @@
 
 ---
 
-## Snipets
+## Snippets
 ```
 .slick-hack () {
 	.slide { .display (none);
